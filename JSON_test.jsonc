@@ -21,10 +21,10 @@
                                 "items": {"type": "number"},
                                 "minItems": 1,
                                 "maxItems": 3
-                            },
-                            ],
+                            }
+                            ]
                     },
-                    "unit": {"type": "string"},
+                    "unit": {"type": "string"}
                     /*
                     "IMU": {
                         "type": "array",
