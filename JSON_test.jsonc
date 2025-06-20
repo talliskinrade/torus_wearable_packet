@@ -12,7 +12,8 @@
                 "properties": {
                     "property": {"type": "string"},
                     "value": {"type": "number"},
-                    "unit": {"type": "string"}
+                    "unit": {"type": "string"},
+                    "comment": {"type": "string"}
                 },
                 "required": ["property", "value", "unit"]
             }
@@ -29,6 +30,8 @@
                 "required": ["property", "value"]
             }
         }
+
+
 
     },
     "required": ["timestamp"]
