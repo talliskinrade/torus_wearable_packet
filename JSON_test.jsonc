@@ -11,7 +11,7 @@
                 "type": "object",
                 "properties": {
                     "property": {"type": "string"},
-                    "value": {"type": "number"},
+                    "value": {"type": ["number","array"]},
                     "unit": {"type": "string"}
                 },
                 "required": ["property", "value", "unit"]
