@@ -11,7 +11,19 @@
                 "type": "object",
                 "properties": {
                     "property": {"type": "string"},
-                    "value": {"type": "number"},
+                    "value": {
+                        "oneOf": [
+                            {
+                                "type": "number"
+                            },
+                            {
+                                "type": "array",
+                                "items": {"type": "number"},
+                                "minItems": 1,
+                                "maxItems": 3
+                            },
+                            ],
+                    },
                     "unit": {"type": "string"},
                     "comment": {"type": "string"}
                 },
