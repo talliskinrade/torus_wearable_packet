@@ -7,10 +7,33 @@
       "value": 22.7
     },
     {
-      "property": "humidity",
-      "unit": "%",
-      "value": 48.3
+      "property": "pressure",
+      "unit": "hPa",
+      "value": 1013.25
+    },
+    {
+      "property": "acceleration",
+      "unit": "m/s^2",
+      "value": [0.4, 0, 0],
+      "comment": "X, Y, Z components"
+    },
+    {
+      "property": "rssi",
+      "unit": "dBm",
+      "value": -86
+    },
+    {
+      "property": "soc_temperature",
+      "unit": "°C",
+      "value": 30.5
+    },
+    {
+      "property": "gyroscope",
+      "unit": "rad/s",
+      "value": [0.01, 0.02, 0.03],
+      "comment": "X, Y, Z components"
     }
+
   ],
   "timestamp": "2025-06-20T10:00:00Z"
 }

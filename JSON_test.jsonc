@@ -40,7 +40,6 @@
                 "required": ["property", "value"]
             }
         }
-
     },
     "required": ["timestamp"]
 }
