@@ -1,0 +1,16 @@
+{
+  "$schema": "./JSON_test.jsonc",
+  "measurements": [
+    {
+      "property": "temperature",
+      "unit": "°C",
+      "value": 22.7
+    },
+    {
+      "property": "humidity",
+      "unit": "%",
+      "value": 48.3
+    }
+  ],
+  "timestamp": "2025-06-20T10:00:00Z"
+}
