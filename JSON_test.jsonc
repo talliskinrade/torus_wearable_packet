@@ -25,9 +25,19 @@
                             ],
                     },
                     "unit": {"type": "string"},
-                    "comment": {"type": "string"}
+                    
+                    "IMU": {
+                        "type": "array",
+                        "items": {
+                            "acc": {"type": "array"},
+                            "gyro": {"type": "array"},
+                            "timestamp": {"type": "number"}
+                        },
+                        "required": ["acc","gyro","timestamp"]
+                    }
                 },
-                "required": ["property", "value", "unit"]
+                "oneOf": [  {"required": ["property", "value", "unit"]},
+                            {"required": ["IMU"]}]
             }
         },
 
