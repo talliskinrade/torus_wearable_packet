@@ -11,8 +11,20 @@
                 "type": "object",
                 "properties": {
                     "property": {"type": "string"},
-                    "value": {"type": "number"},
-                    "unit": {"type": "string"}
+                    "value": {
+                        "oneOf": [
+                            {
+                                "type": "number"
+                            },
+                            {
+                                "type": "array",
+                                "items": {"type": "number"},
+                                "minItems": 1,
+                                "maxItems": 3
+                            },
+                            ],
+                    },
+                    "unit": {"type": "string"},
                     /*
                     "IMU": {
                         "type": "array",
@@ -22,7 +34,8 @@
                             "timestamp": {"type": "number"}
                         },
                         "required": ["acc","gyro","timestamp"]
-                    }*/
+                    }
+                    */
                 },
                 "oneOf": [  {"required": ["property", "value", "unit"]},
                             {"required": ["IMU"]}]
