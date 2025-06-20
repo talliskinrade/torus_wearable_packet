@@ -12,8 +12,8 @@
                 "properties": {
                     "property": {"type": "string"},
                     "value": {"type": "number"},
-                    "unit": {"type": "string"},
-                    
+                    "unit": {"type": "string"}
+                    /*
                     "IMU": {
                         "type": "array",
                         "items": {
@@ -22,7 +22,7 @@
                             "timestamp": {"type": "number"}
                         },
                         "required": ["acc","gyro","timestamp"]
-                    }
+                    }*/
                 },
                 "oneOf": [  {"required": ["property", "value", "unit"]},
                             {"required": ["IMU"]}]
