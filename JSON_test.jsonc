@@ -21,11 +21,11 @@
                                 "items": {"type": "number"},
                                 "minItems": 1,
                                 "maxItems": 3
-                            },
-                            ],
+                            }
+                            ]
                     },
-                    "unit": {"type": "string"},
-                    
+                    "unit": {"type": "string"}
+                    /*
                     "IMU": {
                         "type": "array",
                         "items": {
@@ -37,6 +37,7 @@
                         },
                         "required": ["acc","gyro","timestamp"]
                     }
+                    */
                 },
                 "oneOf": [  {"required": ["property", "value", "accel_unit"]},
                             {"required": ["IMU"]}]
