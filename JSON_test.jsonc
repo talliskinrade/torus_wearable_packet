@@ -29,14 +29,16 @@
                     "IMU": {
                         "type": "array",
                         "items": {
-                            "acc": {"type": "array"},
+                            "accel": {"type": "array"},
                             "gyro": {"type": "array"},
+                            "accel_unit": {"type": "string"},
+                            "gyro_unit": {"type": "string"},
                             "timestamp": {"type": "number"}
                         },
                         "required": ["acc","gyro","timestamp"]
                     }
                 },
-                "oneOf": [  {"required": ["property", "value", "unit"]},
+                "oneOf": [  {"required": ["property", "value", "accel_unit"]},
                             {"required": ["IMU"]}]
             }
         },

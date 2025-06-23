@@ -22,16 +22,25 @@
       "unit": "dBm",
       "value": -86
     },
+    // {
+    //   "property": "soc_temperature",
+    //   "unit": "°C",
+    //   "value": 30.5
+    // },
+    // {
+    //   "property": "gyroscope",
+    //   "unit": "rad/s",
+    //   "value": [0.01, 0.02, 0.03],
+    //   "comment": "X, Y, Z components"
+    // },
     {
-      "property": "soc_temperature",
-      "unit": "°C",
-      "value": 30.5
-    },
-    {
-      "property": "gyroscope",
-      "unit": "rad/s",
-      "value": [0.01, 0.02, 0.03],
-      "comment": "X, Y, Z components"
+      "IMU": [
+        {
+          "acc": [0.1, 0.2, 0.3],
+          "gyro": [0.01, 0.02, 0.03],
+          "timestamp": 1624234567890
+        }
+      ]
     }
 
   ],
