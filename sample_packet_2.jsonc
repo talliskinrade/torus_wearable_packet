@@ -1,0 +1,49 @@
+{
+    "measurement_data": {
+        "state": [
+            {
+                "property": "temperature",
+                "value": 22.7,
+                "unit": "°C",
+                "timestamp": 10000000
+            },
+            {
+                "property": "pressure",
+                "unit": "hPa",
+                "value": 1013.25,
+                "timestamp": 10000001
+            },
+            {
+                "property": "rssi",
+                "unit": "dB",
+                "value": -72,
+                "timestamp": 10000002
+            }
+        ],
+
+        "IMU_batch": {
+            "acc": [0.1, 0.2, 0.3],
+            "acc_unit": "m/s^2",
+            "gyro": [0.01, 0.02, 0.03],
+            "gyro_unit": "rad/s",
+            "timestamp": 1624234567890
+        }
+    },
+
+    "monitoring": [
+        {
+            "property": "battery_voltage",
+            "value": 300,
+            "unit": "mV"
+        },
+        {
+            "property": "soc_temperature",
+            "value": 51,
+            "unit": "°C"
+        },
+        {
+            "property": "npm_status",
+            "value": 0
+        }
+    ]
+}

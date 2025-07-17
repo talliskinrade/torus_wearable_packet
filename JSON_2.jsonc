@@ -3,6 +3,10 @@
     "title": "Data Packet",
     "type": "object",
     "properties": {
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
         "measurement_data": {
             "type": "object",
             "properties": {
@@ -13,9 +17,9 @@
                         "properties": {
                             "property": {"type": "string"},
                             "value": {"type": "number"},
-                            "unit": {"type": "string"}
-                        },
-                        "timestamp": {"type": "number"}
+                            "unit": {"type": "string"},
+                            "timestamp": {"type": "number"}
+                        }
                     }, "required": ["timestamp"]
                 },
                 "IMU_batch": {
@@ -35,5 +39,17 @@
                 }
             }
         }
-    } //add monitoring data
+    },
+    "monitoring": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "property": {"type": "string"},
+                "value": {"type": "number"},
+                "unit": {"type": "string"}
+            },
+            "required": ["property", "value"]
+        }
+    }
 }
