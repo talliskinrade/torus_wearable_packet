@@ -1,55 +1,64 @@
 {
-    "$schema": "https://json-schema.org/draft-07/schema#",
-    "title": "Data Packet",
-    "type": "object",
-    "properties": {
-        "timestamp": {
-            "type": "string",
-            "format": "date-time"
-        },
-        "measurement_data": {
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "Data Packet",
+  "type": "object",
+  "properties": {
+    "base_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "wearable_id": {
+      "type": "string"
+    },
+    "gateway_id": {
+      "type": "string"
+    },
+    "measurement_data": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "type": "array",
+          "items": {
             "type": "object",
             "properties": {
-                "state": {
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "property": {"type": "string"},
-                            "value": {"type": "number"},
-                            "unit": {"type": "string"},
-                            "timestamp": {"type": "number"}
-                        }
-                    }, "required": ["timestamp"]
-                },
-                "IMU_batch": {
-                    "type": "array",
-                    "items": {
-                        "sample": {
-                            "type": "object",
-                            "properties": {
-                                "acc": {"type": "array"},
-                                "acc_unit": {"type": "string"},
-                                "gyro": {"type": "array"},
-                                "gyro_unit": {"type": "string"},
-                                "timestamp": {"type": "number"}
-                            }
-                        }
-                    }
-                }
+              "property": { "type": "string" },
+              "value": { "type": "number" },
+              "unit": { "type": "string" }
             }
+          }
+        },
+        "IMU_batch": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "acc": { "type": "array", "items": { "type": "number" } },
+              "acc_unit": { "type": "string" },
+              "gyro": { "type": "array", "items": { "type": "number" } },
+              "gyro_unit": { "type": "string" },
+              "timestamp": { "type": "number" }
+            },
+            "required": ["timestamp"]
+          }
         }
+      }
     },
     "monitoring": {
-        "type": "array",
-        "items": {
-            "type": "object",
-            "properties": {
-                "property": {"type": "string"},
-                "value": {"type": "number"},
-                "unit": {"type": "string"}
-            },
-            "required": ["property", "value"]
-        }
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "property": { "type": "string" },
+          "value": { "type": "number" },
+          "unit": { "type": "string" }
+        },
+        "required": ["property", "value"]
+      }
     }
+  },
+  "required": ["base_timestamp", "wearable_id", "gateway_id"],
+  "anyOf": [
+    { "required": ["measurement_data"] },
+    { "required": ["monitoring"] }
+  ]
 }
